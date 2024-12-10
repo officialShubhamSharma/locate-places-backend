@@ -8,6 +8,8 @@ WORKDIR /app
 # Copy files to the container image
 COPY . ./
 
+RUN chmod +r ./.mvn/wrapper/maven-wrapper.properties
+
 RUN chmod +x ./mvnw
 
 # Build the app.
