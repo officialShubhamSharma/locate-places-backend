@@ -46,6 +46,7 @@ public class UserController {
                 Cookie cookie = new Cookie("token", jwtToken);
                 cookie.setHttpOnly(true);
                 cookie.setPath("/");
+                cookie.setSecure(true);
                 cookie.setMaxAge(1200);
                 response.addCookie(cookie);
                 return ResponseEntity.ok("Login successful");
