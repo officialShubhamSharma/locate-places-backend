@@ -1,6 +1,6 @@
-package org.example.service;
+package org.locate.service;
 
-import org.example.entity.UserInfo;
+import org.locate.entity.UserInfo;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

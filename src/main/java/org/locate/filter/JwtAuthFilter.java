@@ -1,9 +1,9 @@
-package org.example.filter;
+package org.locate.filter;
 
 import io.jsonwebtoken.JwtException;
 import jakarta.servlet.http.Cookie;
-import org.example.service.JwtService;
-import org.example.service.UserInfoService;
+import org.locate.service.JwtService;
+import org.locate.service.UserInfoService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

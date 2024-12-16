@@ -1,4 +1,4 @@
-package org.example.responsebody;
+package org.locate.responsebody;
 
 import lombok.Getter;
 import lombok.Setter;

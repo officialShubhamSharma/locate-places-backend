@@ -1,8 +1,8 @@
-package org.example.service;
+package org.locate.service;
 
-import org.example.config.SecurityConfig;
-import org.example.entity.UserInfo;
-import org.example.repository.UserInfoRepository;
+import org.locate.config.SecurityConfig;
+import org.locate.entity.UserInfo;
+import org.locate.repository.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

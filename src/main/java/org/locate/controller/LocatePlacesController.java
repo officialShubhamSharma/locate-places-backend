@@ -1,8 +1,8 @@
-package org.example.controller;
+package org.locate.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.requestbody.LocatePlacesRequestBody;
-import org.example.service.LocatePlacesService;
+import org.locate.requestbody.LocatePlacesRequestBody;
+import org.locate.service.LocatePlacesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

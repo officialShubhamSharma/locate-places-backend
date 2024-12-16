@@ -1,8 +1,8 @@
-package org.example.config;
+package org.locate.config;
 
 import jakarta.servlet.http.HttpServletResponse;
-import org.example.filter.JwtAuthFilter;
-import org.example.service.UserInfoService;
+import org.locate.filter.JwtAuthFilter;
+import org.locate.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

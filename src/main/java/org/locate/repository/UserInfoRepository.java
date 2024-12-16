@@ -1,6 +1,6 @@
-package org.example.repository;
+package org.locate.repository;
 
-import org.example.entity.UserInfo;
+import org.locate.entity.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

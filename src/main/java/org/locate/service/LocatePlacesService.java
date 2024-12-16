@@ -1,12 +1,12 @@
-package org.example.service;
+package org.locate.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.config.RestTemplateConfig;
-import org.example.requestbody.LocatePlacesRequestBody;
-import org.example.requestbody.LocatePlacesPayload;
-import org.example.requestbody.LocatePlacesPayloadMessage;
-import org.example.responsebody.LocatePlacesResponseBody;
+import org.locate.config.RestTemplateConfig;
+import org.locate.requestbody.LocatePlacesRequestBody;
+import org.locate.requestbody.LocatePlacesPayload;
+import org.locate.requestbody.LocatePlacesPayloadMessage;
+import org.locate.responsebody.LocatePlacesResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class LocatePlacesService {

@@ -1,11 +1,11 @@
-package org.example.controller;
+package org.locate.controller;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
-import org.example.entity.AuthRequest;
-import org.example.entity.UserInfo;
-import org.example.service.JwtService;
-import org.example.service.UserInfoService;
+import org.locate.entity.AuthRequest;
+import org.locate.entity.UserInfo;
+import org.locate.service.JwtService;
+import org.locate.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -37,7 +37,7 @@ public class UserController {
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateAndGetToken(@RequestBody AuthRequest authRequest, HttpServletResponse response) {
         try {
-            System.out.println("/signup request received.");
+            System.out.println("/signin request received.");
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword())
             );
