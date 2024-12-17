@@ -8,10 +8,14 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserInfo {
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
     private String name;
-    @Id
+
+    @Column(unique = true)
     private String email;
+
     private String password;
 }
