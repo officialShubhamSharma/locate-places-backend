@@ -49,6 +49,10 @@ public class UserController {
                 cookie.setSecure(true);
                 cookie.setMaxAge(1200);
                 response.addCookie(cookie);
+                String existingCookieHeader = response.getHeader("Set-Cookie");
+                if (existingCookieHeader != null && existingCookieHeader.contains("token=")) {
+                    response.setHeader("Set-Cookie", existingCookieHeader + "; SameSite=None");
+                }
                 return ResponseEntity.ok("Login successful");
             } else {
                 throw new UsernameNotFoundException("Invalid user request!");
