@@ -30,9 +30,8 @@ public class LocatePlacesService {
     @Autowired
     private RestTemplateConfig restTemplateConfig;
 
-    @Cacheable(value = "apiCache", key = "#root.methodName + ':' + #normalizedBody")
-    public String getPlaces(LocatePlacesRequestBody locatePlacesBody) throws JsonProcessingException {
-        String normalizedBody = normalizeJson(locatePlacesBody);
+    @Cacheable(value = "apiCache", key = "#root.methodName + ':' + #locatePlacesBody.currentCity.toLowerCase() + ':' + #locatePlacesBody.radiusInKm")
+    public String getPlaces(LocatePlacesRequestBody locatePlacesBody) {
         HttpHeaders headers = new HttpHeaders();
         headers.set("x-rapidapi-key",rapidApiKey);
         headers.set("x-rapidapi-host",rapidApiHost);
@@ -69,8 +68,4 @@ public class LocatePlacesService {
         return locatePlacesPayload;
     }
 
-    public String normalizeJson(LocatePlacesRequestBody jsonMap) throws JsonProcessingException {
-        ObjectMapper objectMapper=new ObjectMapper();
-        return objectMapper.writeValueAsString(jsonMap).toLowerCase();
-    }
 }

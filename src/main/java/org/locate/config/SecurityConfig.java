@@ -87,7 +87,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("https://locate-places-frontend.onrender.com")); // Specify allowed origins
+        configuration.setAllowedOrigins(List.of("https://locate-places.onrender.com")); // Specify allowed origins
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE")); // Allowed methods
         configuration.setAllowedHeaders(List.of("*")); // Allowed headers
         configuration.setAllowCredentials(true); // Allow credentials (cookies)
