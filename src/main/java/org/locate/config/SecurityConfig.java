@@ -44,7 +44,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/signup","/auth/signin","/actuator/*","/swagger-ui/*","/v3/**").permitAll()
+                        .requestMatchers("/auth/signup","/auth/login","/actuator/*","/swagger-ui/*","/v3/**").permitAll()
                         .anyRequest().authenticated() // Protect all other endpoints
                 )
                 .sessionManagement(sess -> sess

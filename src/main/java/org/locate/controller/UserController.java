@@ -34,10 +34,10 @@ public class UserController {
         return service.addUser(userInfo);
     }
 
-    @PostMapping("/signin")
+    @PostMapping("/login")
     public ResponseEntity<?> authenticateAndGetToken(@RequestBody AuthRequest authRequest, HttpServletResponse response) {
         try {
-            System.out.println("/signin request received.");
+            System.out.println("/login request received.");
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword())
             );
